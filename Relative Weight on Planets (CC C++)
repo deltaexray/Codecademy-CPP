@@ -1,0 +1,100 @@
+Relative Weight on Planets
+
+#include <iostream>
+
+int main() {
+
+
+  double ew = 0;
+  double me, ve, ma, ju, sa, ur, ne = 0;
+  int planet = 0; 
+
+  std::cout << "Your weight on earth, please: ";
+  std::cin >> ew;
+
+  std::cout << "Enter the Number of chosen planet, please: "; 
+  std::cin >> planet;
+
+  me = ew*0.38;
+  ve = ew*0.91; 
+  ma = ew*0.38;
+  ju = ew*2.34;
+  sa = ew*1.06;
+  ur = ew*0.92;
+  ne = ew*1.19; 
+
+
+
+  switch (planet) {
+    case 1: 
+      std::cout << "Your weight on Mercury is: " << me <<"\n";
+      break;
+
+    case 2:
+      std::cout << "Your weight on Venus is: " << ve <<"\n";
+      break;
+
+    case 3: 
+      std::cout << "Your weight on Mars is: " << ma << "\n";
+      break;
+
+    case 4:
+      std::cout << "Your weight on Jupiter is: " << ju << "\n"; 
+      break;
+
+    case 5: 
+      std::cout << "Your weight on Saturn is: " << sa << "\n";
+      break;
+
+    case 6:
+      std::cout << "Your weight on Uranus is: " << ur << "\n";
+      break;
+
+    case 7: 
+      std::cout << "Your weight on Neptune is: " << ne << "\n";
+      break;
+
+    default: 
+      std::cout << "Invalid\n";
+      break;
+
+
+  }  
+  
+  
+}
+
+
+
+
+
+
+Leap Year
+
+#include <iostream>
+
+int main() {
+
+  int year = 0; 
+
+
+  std::cout << "Enter a year, please: ";
+  std::cin >> year; 
+
+  if (year < 1000 || year > 9999) {
+
+    std::cout << "Invalid Entry, please Try again :)\n";
+  } 
+  else if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+    
+    std::cout << year << " falls on a leap year.\n";
+    
+  } 
+  else  {
+
+    std::cout << year << " is not a leap year.\n";
+  }
+  
+  
+  
+} 
