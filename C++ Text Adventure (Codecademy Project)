@@ -1,0 +1,255 @@
+/* Blacklist themed Text adventure.*/
+
+
+/* Objective is to build your own Text Adventure. Should include all of twhat u've previously learned.*/
+/*A Storyline with a beginning and, at least, three possible endings. Choose a topic of your liking and start maping out your ideas, choices etc., pp.*/
+
+
+
+#include <iostream>
+#include <cstdlib>
+#include <string>
+using namespace std; // Only cout instead of std::cout.
+// bool yes; Later.
+
+
+int main () {
+// var for Q's. 
+int answer1 = 0;
+int answer2 = 0;
+int answer3 = 0;
+int answer4 = 0;
+int name, hsmain, hssec, hsthr;
+
+// var for sorting values. 
+int ag1 = 0; // Baseline
+int ag2 = 0; // Yes
+int ag3 = 0; // Young & Wild
+int ag4 = 0; // No. 
+
+cout << "//////////////////////////////////////////////////////\n";
+cout << "////////////.Welcome to the X42-BL.RR test.///////////\n";
+cout << "//////////////////////////////////////////////////////\n\n";
+
+cout << "In this following test, we'll determine if you're suitable for work in the RR Task Force.\n";
+cout << "Note: This is going to be your only chance.\n";
+cout << "You have been warned.\n\n";
+
+//Introduction has been completed. 
+
+// Generic Temper assessment. Q1
+cout << "Q1) Which of the following words would describe you most?:\n";
+cout << "1) Calm. " << "2) Leader.\n";
+cout << "3) Energetic. " << "4) Chaos.\n";
+
+cout << "Answer: "; cin >> answer1; cout << "\n";
+// processing, if right answers were given. 
+
+while (answer1 > 4) {
+  cout << "Invalid answer, You're dissmissed.\n";
+  return 0;
+  } if (answer1 <= 4) {
+  cout << "Your answer will be evaluated.\n\n";
+  }
+if (answer1 == 1) {
+    ag1++;
+    } else if (answer1 == 2) {
+    ag2++;
+    } else if (answer1 == 3) {
+    ag3++;
+    } else if (answer1 == 4) {
+    ag4++;
+    }
+    
+// Character Test. Q2
+
+cout << "Q2) Do you follow rules?: \n";
+cout << "1) Yes. " << "2) What rules?\n";
+cout << "3) No. " << "4) Depends.\n";
+
+cout << "Answer: "; cin >> answer2; cout << "\n";
+// processing if answer were right. 
+while (answer2 > 4) {
+  cout << "Invalid answer, You're dissmissed.\n";
+  return 0;
+  } if (answer2 <= 4 && answer2 != 4) {
+  cout << "Your answer will be evaluated.\n\n";
+  } else if (answer2 == 4) {
+  cout << "Interesting.\n\n";  
+  }
+
+if (answer2 == 1) {
+    ag1++;
+    } else if (answer2 == 2) {
+    ag2++;
+    } else if (answer2 == 3) {
+    ag4++;
+    } else if (answer2 == 4) {
+    ag3++;
+    } // ag3 & ag4 switched. 
+
+// Kill test. Q3
+
+cout << "Q3) You had to Kill someone, how do you react?: \n";
+cout << "1) It's my Job. " << "2) It's a pleasure for me.\n";
+cout << "3) I'm saddened. " << "4) Should've been better.\n";
+cout << "Answer: "; cin >> answer3; cout << "\n";
+
+while (answer3 > 4) {
+  cout << "Invalid answer, You're dissmissed.\n";
+  return 0;
+  } if (answer3 <= 4) {
+  cout << "Your answer will be evaluated.\n\n";
+  }  
+
+if (answer3 == 1) {
+    ag1++;
+    } else if (answer3 == 2) {
+    ag4++;
+    } else if (answer3 == 3) {
+    ag4++;
+    } else if (answer3 == 4) {
+    ag2++;
+    }
+
+// Q4
+
+cout << "Q4) You'll be given Classified Intel. How do you react?: \n";
+cout << "1) I can't keep my mouth shut. " << "2) As If I hadn't any.\n";
+cout << "3) I'm going to sweat. " << "4) Worth a lot, surely.\n";
+cout << "Answer: "; cin >> answer4; cout << "\n";
+
+while (answer4 > 4) {
+  cout << "Invalid answer, You're dissmissed.\n";
+  return 0;
+  } if (answer4 <= 4) {
+  cout << "Your answer will be evaluated.\n\n";
+  } 
+  cout << "//////////////////////////////////////////////////\n\n";
+
+if (answer4 == 1) {
+    ag4++;
+    } else if (answer4 == 2) {
+    ag2++;
+    } else if (answer4 == 3) {
+    ag1++;
+    } else if (answer4 == 4) {
+    ag3++;
+    }
+string firstName; // Subject Name storage.
+cout << "Lastly, How do you want to be called?: \n";
+cout << "Input: "; cin >> firstName; cout << "\n\n";
+cout << "///////////////////////////////////////////////////////\n\n";
+// Basic Q Test completed. 
+// Now going over to lifepath decisions. 
+
+cout << "You have know completed your basic evaluation.\n";
+cout << "However, your answers have been, let's say, complicated.\n\n";
+cout << "In the following, we'll determine your tactical capibilities.\n\n";
+
+cout << "The following has happend: \n";
+cout << "A classrom full of elementary school kids have been taken \n";
+cout << "hostage. The teacher, however, has been taken hostage in\n";
+cout << "a different room in the buildung, which has yet to be\n";
+cout << "identified. Only problem: She's your sister.\n";
+cout << "How do you react?\n\n";
+
+cout << "1) I start shaking and lose control.\n";
+cout << "2) I follow the book and my training.\n";
+cout << "3) Doesn't matter, the Job's the Job.\n";
+cout << "4) I leave the site and quit my career.\n";
+cout << "Answer: "; cin >> hsmain; cout << "\n";
+// processing if answer is valid or not. 
+while (hsmain > 4) {
+  cout << "Invalid answer, You're dissmissed.\n";
+  return 0;
+  } if (hsmain <= 4) {
+  cout << "Furthermore: \n\n";
+
+      if (hsmain == 1) {
+        ag4++;
+        } else if (hsmain == 2) {
+        ag2++;
+        } else if (hsmain == 3) {
+        ag2++;
+        } else if (hsmain == 4) {
+        ag4++;
+        }
+
+ }
+if (hsmain == 4 || hsmain == 1) {
+  cout << "You have abandoned your team and the situation has      gotten out of hand.\n";
+  return 0;
+  } else if (hsmain == 2 || hsmain == 3) {
+  cout << "You and your team is advancing onto the target building.\n";
+  cout << "However, at the entrace, you have to make a choice: \n";
+  cout << "1) Split up. or 2) Move as one.\n";
+  cout << "How do you decide?: "; cin >> hssec; cout << "\n";
+  
+  
+   while (hssec > 2) {
+   cout << "Invalid answer, You're dissmissed.\n";
+   return 0;
+     } if (hssec == 1) {
+    cout << "Your're splitting up and move on the teacher and the students at the same time.\n\n";
+     } else if (hssec == 2) {
+    cout << "Your moving up the stairs, in search for the teacher.\n"; cout << "The students will be taken care of when you're moving down.\n\n";
+    } 
+  
+if (hssec == 1) {
+        ag3++; ag4++;
+        } else if (hssec == 2) {
+        ag2++; ag1++;
+        } 
+
+  } 
+
+cout << "Your team has found the teacher and she's safe.\n";
+cout << "You're now moving down the floors and clearing out other rooms.\n";
+cout << "Once you've reached the last classroom, you need to make a choice: \n";
+cout << "1) A silent and cover approach.\n";
+cout << "or\n";
+cout << "2) Loud and fast.\n";
+cout << "Answer: "; cin >> hsthr; cout << "\n\n";
+
+while (hsthr > 2) {
+  cout << "Invalid answer, you're dissmissed.\n\n";
+  return 0;
+  } if (hsthr == 1) {
+  cout << "Your team enters the classroom silently and takes out all threats. Mission complete.\n";
+  ag1++; ag2++;
+  } else if (hsthr == 2) {
+  cout << "Your team goes in loud, hectic ensues and 10 students get killed in the crossfire. Mission failure.\n\n";
+  ag3++; ag4++;
+  }
+
+cout << "Congratulations. You have passed the evaluation Test for the RR Task Force.\n";
+cout << "The System will now process your perfomance and output your results.\n";
+
+for (int i = 0; i < 10; i++) {
+  cout << "Processing\n";
+} 
+cout << "\n";
+
+if (ag1 > 4 || ag1 <= 6 && ag1 > ag2 && ag1 > ag3 && ag1 > ag4) {
+  cout << "Subject: " << firstName << "\n";
+  cout << "You have passed. You will be informed about the next steps soon. Goodbye.\n\n";
+  return 0;
+} else if (ag2 > 5 || ag2 <= 8 && ag2 > ag1 && ag2 > ag3 && ag2 > ag4) {
+  cout << "Subject: " << firstName << "\n"; 
+  cout << "Cooper here: You have passed with flying colors. Welcome onboard the Team, you'll be meeting them in the coming days. Make 'em proud.\n\n";
+  // Bool type switch on True, indicating he's green lit. Needs to be added.
+  return 0;
+} else if (ag3 > 2 || ag3 <= 5 && ag3 < ag1 && ag3 < ag2 && ag3 < ag4) {
+  cout << "Subject: " << firstName << "\n";
+  cout << "You're like a young horse: Wild and unpredictable but with a lot of talent. We're ging to keep an eye on you. Goodbye.\n\n";
+  return 0;
+} else if (ag4 > 4 || ag4 <= 9 && ag4 < ag1 && ag4 < ag2 && ag4 < ag3) {
+  cout << "Subject: " << firstName << "\n";
+  cout << "You will be dissmissed and put under evaluation. Dissmised.\n\n";
+  return 0;
+}
+
+
+return 0;
+}
