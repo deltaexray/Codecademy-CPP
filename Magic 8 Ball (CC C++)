@@ -1,0 +1,56 @@
+MAGIC 8 BALL 
+
+#include <iostream>
+#include <cstdlib>
+
+int main () {
+
+  std::cout << "MAGIC 8-BALL SAYS: \n\n";
+
+  srand(time(NULL)); 
+
+  int future = std::rand() % 10;
+
+  switch (future) {
+    case 1: 
+      std::cout << "It is certain.\n";
+      break;
+    case 2: 
+      std::cout << "It is decidedly so.\n";
+      break;  
+    case 3: 
+      std::cout << "Without a doubt.\n";
+      break;
+    case 4: 
+      std::cout << "Yes - definitely.\n";
+      break;
+    case 5:
+      std::cout << "Your may realy on it.\n";
+      break;
+    case 6: 
+      std::cout << "As I see it, yes.\n";
+      break;
+    case 7: 
+      std::cout << "Most likely.\n";
+      break;
+    case 8:
+      std::cout << "Outlook good.\n";
+      break;
+    case 9:
+      std::cout << "Yes.\n";
+      break;
+    case 10: 
+      std::cout << "Signs point to yes.\n";
+      break;          
+    default: 
+      std::cout << "Try again.\n";
+      break;
+
+
+
+  }
+
+
+return 0;
+
+}
