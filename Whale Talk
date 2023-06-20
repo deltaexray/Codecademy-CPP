@@ -1,0 +1,70 @@
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std; 
+// namspace only for convenience 
+
+/* Main uscase for this program is translate any text input into "whale language". 
+There are no constants and only vowels, excluding y. Also u's and e's have to be doubled. Result is sung slowly.*/
+
+int main() {
+
+string ts;
+// translation input. 
+// "Welcome to Merlin & Merlin Translation Studios."
+
+
+cout << "Welcome to Merlin & Merlin's Translations\n";
+cout << "We'll translate any Input into whale talk.\n\n";
+cout << "Please enter: ";
+getline (cin, ts); cout << "\n\n";
+
+
+// for loop to check if input is text, if not return or exit. 
+
+// Optional but room's left open for that. 
+
+vector<char> vowels; 
+vowels.push_back('a');
+vowels.push_back('e');
+vowels.push_back('i');
+vowels.push_back('o');
+vowels.push_back('u');
+
+
+vector<char> result; 
+
+// Vowels created, char set for result. Now for the Loop. 
+
+for (int x = 0; x < ts.size(); x++) {
+
+  for (int y = 0; y < vowels.size(); y++) {
+
+    if (ts[x] == vowels[y]) {
+      
+      result.push_back(ts[x]);
+      }
+
+   }
+    if (ts[x] == 'u' || ts[x] == 'e') {
+  
+  result.push_back(ts[x]);
+  } 
+
+ }
+
+
+  for (int z = 0; z < result.size(); z++) {
+
+  cout << result[z];
+  }
+
+cout << "\n\n";
+
+return 0;
+}
+
+/*
+Had to read and rethink it almost 20times, 'cause for me the doubling of the "u's and e's" was to be done after the actuall loop. 
+Until I read the instructions again and noticed, something wasn't working. 
+Also: With getline, u can now input everything you want. So Yeah. good learning Experience. */
